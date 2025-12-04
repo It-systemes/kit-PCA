@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit PCA complet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro {
+            background: #f8f9ff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .intro h2 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section h3 {
+            color: #1e3c72;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .resource-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .resource-card h4 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .resource-card h4::before {
+            content: "📄";
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .resource-card p {
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+        
+        .btn-download {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-download:hover {
+            background: #f0f0f0;
+            transform: scale(1.05);
+        }
+        
+        .checklist {
+            background: #fff9e6;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #ffc107;
+        }
+        
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .checklist li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .expert-section {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .expert-section h3 {
+            color: white;
+            border: none;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        
+        .footer {
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .resource-card:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🛡️ Kit PA Complet</h1>
+            <p>Plan de Continuité d'Activité - Tous vos outils essentiels</p>
+        </div>
+        
+        <div class="content">
+            <div class="intro">
+                <h2>Bienvenue dans votre Kit PCA</h2>
+                <p>Ce document regroupe l'ensemble des ressources nécessaires pour mettre en place et maintenir un Plan de Continuité d'Activité efficace dans votre organisation. Chaque élément a été conçu pour vous accompagner dans la protection de votre activité face aux incidents critiques.</p>
+            </div>
+            
+            <div class="section">
+                <h3>📋 Documents inclus</h3>
+                
+                <div class="resource-card">
+                    <h4>Template PCA personnalisable</h4>
+                    <p>Document Word de 7 pages comprenant tous les chapitres essentiels : analyse des risques, stratégies de continuité, procédures d'activation, plans de communication et tests. Entièrement personnalisable selon vos besoins.</p>
+                    <p><strong>Format :</strong> Microsoft Word (.docx) • <strong>Pages :</strong> 7</p>
+                    <a href="#" class="btn-download" onclick="alert('Lien de téléchargement à configurer'); return false;">📥 Télécharger le Template</a>
+                </div>
+                
+                <div class="resource-card">
+                    <h4>Checklist tests mensuels</h4>
+                    <p>Guide pratique pour réaliser vos tests mensuels de PCA. Inclut les points de vérification, les procédures de test, et les tableaux de suivi pour garantir l'opérationnalité continue de votre plan.</p>
+                    <p><strong>Format :</strong> PDF / Excel (.xlsx) • <strong>Fréquence :</strong> Mensuelle</p>
+                    <a href="#" class="btn-download" onclick="alert('Lien de téléchargement à configurer'); return false;">📥 Télécharger la checklist</a>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>✅ Ce que contient votre kit</h3>
+                <div class="checklist">
+                    <ul>
+                        <li>Template PCA complet et personnalisable (7 pages)</li>
+                        <li>Checklist détaillée des tests mensuels</li>
+                        <li>Grilles d'analyse de risques</li>
+                        <li>Modèles de communication de crise</li>
+                        <li>Tableaux de suivi et indicateurs</li>
+                        <li>30 minutes de diagnostic personnalisé avec un expert</li>
+                        <li>Guides de mise en œuvre pas-à-pas</li>
+                        <li>Ressources complémentaires et meilleures pratiques</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="expert-section">
+                <h3>💬 Diagnostic expert inclus</h3>
+                <p style="font-size: 1.1em; margin-bottom: 20px;">Bénéficiez de 30 minutes de consultation téléphonique avec un expert PCA pour valider votre approche et obtenir des recommandations personnalisées.</p>
+                <div class="contact-info">
+                    <p><strong>📞 Pour réserver votre session :</strong></p>
+                    <p>Email : <a href="mailto:bonjour@it-systemes.fr" style="color: white; text-decoration: underline;">bonjour@it-systemes.fr</a></p>
+                    <p>Téléphone : +33 (0)1 70 83 20 91</p>
+                </div>
+            </div>
+            
+            <div class="section" style="margin-top: 40px;">
+                <h3>🚀 Comment démarrer ?</h3>
+                <div style="background: #e8f5e9; padding: 20px; border-radius: 10px;">
+                    <ol style="padding-left: 20px;">
+                        <li style="margin-bottom: 15px;"><strong>Téléchargez le template PCA</strong> et familiarisez-vous avec sa structure</li>
+                        <li style="margin-bottom: 15px;"><strong>Identifiez vos processus critiques</strong> et commencez l'analyse de risques</li>
+                        <li style="margin-bottom: 15px;"><strong>Personnalisez le document</strong> selon votre contexte organisationnel</li>
+                        <li style="margin-bottom: 15px;"><strong>Planifiez votre session avec l'expert</strong> pour valider votre approche</li>
+                        <li><strong>Mettez en place les tests mensuels</strong> avec la checklist fournie</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Kit PCA Complet</strong> • Document généré le <span id="date"></span></p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Pour toute question, contactez notre équipe support</p>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('date').textContent = new Date().toLocaleDateString('fr-FR', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    </script>
+</body>
+</html>
