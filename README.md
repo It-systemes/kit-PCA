@@ -1,2 +1,0 @@
-# kit-PCA
-KIT PCA 
